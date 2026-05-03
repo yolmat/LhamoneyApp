@@ -38,7 +38,10 @@
   --sideBar-hex: #10B981;
 
   /* notification */
-  --notificationReceived-hex: #2E7D32;
+  --notificationReceived-hex: #205823;
+  --notificationSpent-hex: #76010c;
+  --notificationNews-hex: #404040;
+  --notificationsIcon-hex: #E6F2EF;
 }
 
 /* =========================
@@ -77,6 +80,7 @@
   --notificationReceived-hex: #2E7D32;
   --notificationSpent-hex: #A90111;
   --notificationNews-hex: #2B2B2B;
+  --notificationsIcon-hex: #E6F2EF;
 
 }
 
@@ -130,6 +134,7 @@
   --color-notification-received: hsl(from var(--notificationReceived-hex) h s l);
   --color-notification-spent: hsl(from var(--notificationSpent-hex) h s l);
   --color-notification-news: hsl(from var(--notificationNews-hex) h s l);
+  --color-notification-icon: hsl(from var(--notificationsIcon-hex) h s l);
 
   /* Radius */
   --radius: var(--radius);

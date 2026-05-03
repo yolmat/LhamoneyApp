@@ -460,13 +460,13 @@ export function NotificationButton() {
                     key={i.id}
                   >
                     <div
-                      className={`p-2 h-fit w-fit rounded-full
+                      className={`p-2 h-fit w-fit rounded-full text-notification-icon
                         ${
                           type === "received"
-                            ? "bg-notification-received/80"
+                            ? "bg-notification-received/90"
                             : type === "spent"
-                              ? "bg-notification-spent/80"
-                              : "bg-notification-news/80"
+                              ? "bg-notification-spent/90"
+                              : "bg-notification-news/90"
                         }
                         `}
                     >
