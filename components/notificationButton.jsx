@@ -4,8 +4,6 @@ import {
   BellRing,
   ChartNoAxesColumnIncreasing,
   ShoppingCart,
-  Sparkles,
-  TrendingUp,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -23,7 +21,8 @@ const data = [
   {
     id: 1,
     title: "Salário",
-    description: "Salário mensal empresa Lopes",
+    description:
+      "Salário mensal empresa Lopes 10.093.090/0001-23 asdipoashdaksljdhaslkdjahsdlkasjhdaskjdhgasjkdhgaskdj",
     value: "3100",
     type: "received",
     data: "03/05/26",
@@ -440,7 +439,7 @@ export function NotificationButton() {
           </SheetHeader>
         </div>
 
-        <div className="flex-1 overflow-hidden">
+        <div className="flex-1 overflow-hidden wrap-anywhere">
           <ScrollArea className="h-full">
             <div className="flex flex-col p-4 gap-3">
               {data.map((i) => {
@@ -448,7 +447,7 @@ export function NotificationButton() {
 
                 return (
                   <div
-                    className={`flex w-full px-5 py-3 gap-3 border rounded-xl
+                    className={`flex w-full max-w-full px-5 py-3 gap-3 border rounded-xl
                         ${
                           type === "received"
                             ? "bg-notification-received/10 border-notification-received/30"
@@ -483,8 +482,8 @@ export function NotificationButton() {
                         <h1 className="font-bold">{i.title}</h1>
                         <h3 className="font-extralight opacity-50">{i.data}</h3>
                       </div>
-                      <div>
-                        <h3 className="font-light text-foreground/80">
+                      <div className="h-fit">
+                        <h3 className="font-light text-foreground/80 text-balance">
                           {i.description}
                         </h3>
                       </div>
