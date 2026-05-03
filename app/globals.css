@@ -35,7 +35,10 @@
   --selected-hex: #21996d;
 
   /* SideBar */
-  --sideBar-hex: #10B981
+  --sideBar-hex: #10B981;
+
+  /* notification */
+  --notificationReceived-hex: #2E7D32;
 }
 
 /* =========================
@@ -45,7 +48,7 @@
   --bg: #131313;
   --fg: #E6F2EF;
 
-  --card-bg: #0F2E27;
+  --card-bg: #131313;
   --primary-hex: #0A3C30;
   --accent-hex: #1F7A67;
 
@@ -68,7 +71,13 @@
   --selected-hex: #34D399;
 
   /* SideBar */
-  --sideBar-hex: #10B981
+  --sideBar-hex: #10B981;
+
+  /* notification */
+  --notificationReceived-hex: #2E7D32;
+  --notificationSpent-hex: #A90111;
+  --notificationNews-hex: #2B2B2B;
+
 }
 
 /* =========================
@@ -113,8 +122,14 @@
   /* Text */
   --color-unselected-text: hsl(from var(--unselected-hex) h s l);
   --color-selected-text: hsl(from var(--selected-hex) h s l);
+
   /* SideBar */
   --color-sideBar-bg: hsl(from var(--sideBar-hex) h s l);
+
+  /* Notifications */
+  --color-notification-received: hsl(from var(--notificationReceived-hex) h s l);
+  --color-notification-spent: hsl(from var(--notificationSpent-hex) h s l);
+  --color-notification-news: hsl(from var(--notificationNews-hex) h s l);
 
   /* Radius */
   --radius: var(--radius);
