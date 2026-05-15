@@ -6,7 +6,7 @@ export default function Page() {
       <div className="grid lg:grid-cols-2 2xl:grid-cols-4 gap-4 px-4">
         <CardDashboard
           type={"balance"}
-          value={1000.54}
+          value={10000000.54}
           rangeTrace={true}
           range={4.2}
           lastMonth={"Abril"}

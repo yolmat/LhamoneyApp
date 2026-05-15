@@ -70,7 +70,11 @@ export function CardDashboard({
           {description}
         </CardDescription>
         <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
-          R$ {value}
+          R${" "}
+          {Intl.NumberFormat("pt-BR", {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2,
+          }).format(value)}
         </CardTitle>
         <CardAction>
           <Icon className="text-foreground/50 font-bold" />
