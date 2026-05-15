@@ -1,4 +1,5 @@
 import { CardDashboard } from "@/components/cardDashboard";
+import { ChartDashboard } from "@/components/chartDashboard";
 
 export default function Page() {
   return (
@@ -37,7 +38,9 @@ export default function Page() {
           year={26}
         />
       </div>
-      <div className="min-h-screen flex-1 rounded-xl bg-muted/50 md:min-h-min" />
+      <div className="grid lg-grid-cols-2">
+        <ChartDashboard />
+      </div>
     </div>
   );
 }
