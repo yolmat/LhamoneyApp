@@ -6,6 +6,7 @@ import {
   CardDescription,
   CardTitle,
   CardAction,
+  CardFooter,
 } from "./ui/card";
 import {
   Ban,
@@ -13,9 +14,18 @@ import {
   Landmark,
   PiggyBank,
   ShoppingCart,
+  TrendingDown,
+  TrendingUp,
 } from "lucide-react";
 
-export function CardDashboard({ type, value }) {
+export function CardDashboard({
+  type,
+  value,
+  rangeTrace,
+  range,
+  lastMonth,
+  year,
+}) {
   let description;
   let Icon;
 
@@ -46,8 +56,15 @@ export function CardDashboard({ type, value }) {
       break;
   }
 
+  let trace;
+  if (rangeTrace === true) {
+    trace = "+";
+  } else {
+    trace = "-";
+  }
+
   return (
-    <Card className="@container/card md:px-5 md:py-10 aspect-video rounded-xl">
+    <Card className="@container/card md:py-2 md:px-10 aspect-video rounded-xl justify-center size-full">
       <CardHeader>
         <CardDescription className="text-foreground/50 font-bold uppercase">
           {description}
@@ -59,6 +76,26 @@ export function CardDashboard({ type, value }) {
           <Icon className="text-foreground/50 font-bold" />
         </CardAction>
       </CardHeader>
+      <CardFooter className="flex-col items-start gap-1.5 text-sm bg-background">
+        <div className="line-clamp-1 flex gap-2 font-medium items-center">
+          <div
+            className={`flex items-center gap-2 rounded-xl p-1 ${rangeTrace ? "bg-footerCardReceived-text/10 text-footerCardReceived-text" : "bg-footerCardSpent-text/10 text-footerCardSpent-text"}`}
+          >
+            {rangeTrace ? (
+              <TrendingUp className="size-4" />
+            ) : (
+              <TrendingDown className="size-4" />
+            )}
+            <p>
+              {rangeTrace ? "+" : "-"}
+              {range}%
+            </p>
+          </div>
+          <p>
+            vs {lastMonth}/{year}
+          </p>
+        </div>
+      </CardFooter>
     </Card>
   );
 }
