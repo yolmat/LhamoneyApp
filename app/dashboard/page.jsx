@@ -39,7 +39,7 @@ export default function Page() {
           year={26}
         />
       </div>
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid lg:grid-cols-1 2xl:grid-cols-2 gap-4">
         <BarsChartDashboard />
         <RadicalChartDashboard />
       </div>
